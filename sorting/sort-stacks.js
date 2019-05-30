@@ -1,8 +1,8 @@
-var stack = [2,3,1];
+var stack = [2, 3, 1];
 
 function sortStack(stack) {
     if (stack == null) {
-        return stack; 
+        return stack;
     }
 
     var newStack = [];
@@ -10,7 +10,7 @@ function sortStack(stack) {
 
     while (stack.length > 0) {//While our parameter stack still has elements in it 
         var temp = stack.pop();//Store the top value of our stack for comparison against top of newStack 
-        while (newStack.length > 0 && temp > newStack[newStack.length-1]) {
+        while (newStack.length > 0 && temp > newStack[newStack.length - 1]) {
             stack.push(newStack.pop());//If so push it back onto the old stack 
         }
         newStack.push(temp);//If temp is smaller 
@@ -21,6 +21,6 @@ function sortStack(stack) {
     }
 
     return newStack;
-}   
+}
 
 sortStack(stack);
